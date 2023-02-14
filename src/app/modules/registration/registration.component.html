@@ -1,0 +1,130 @@
+<div [hidden]="submitted" class="container">
+  <h1>Página de registro</h1>
+  {{ model | json }}
+  <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+    <div class="form-group">
+      <label for="firstName">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        name="firstName"
+        #firstName="ngModel"
+        required
+        [(ngModel)]="model.firstname"
+      />
+      <div
+        [hidden]="firstName.valid || firstName.pristine"
+        class="alert alert-danger"
+      >
+        El nombre es requerido
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Apellidos</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        name="lastName"
+        #lasName="ngModel"
+        required
+        [(ngModel)]="model.lastname"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        #email="ngModel"
+        required
+        [(ngModel)]="model.email"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="size">Talla de Camiseta</label>
+      <select
+        class="form-control"
+        id="size"
+        name="size"
+        #size="ngModel"
+        required
+        [(ngModel)]="model.size"
+      >
+        <option *ngFor="let size of sizes" [value]="size">{{ size }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="running-club">Club de Running</label>
+      <input
+        type="text"
+        class="form-control"
+        id="running-club"
+        name="running-club"
+        #runningClub="ngModel"
+        required
+        [(ngModel)]="model.runningClub"
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!personForm.form.valid"
+    >
+      Enviar
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="newPerson()">
+      Nueva Persona
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      (click)="personForm.reset()"
+    >
+      reset
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      (click)="newPerson(); personForm.reset()"
+    >
+      Nueva Persona Y reset
+    </button>
+  </form>
+</div>
+
+<div class="container" [hidden]="!submitted">
+  <h2>Has enviado los siguientes datos:</h2>
+  <div class="row">
+    <div class="col-3">Nombre</div>
+    <div class="col-9">{{ model.firstname }}</div>
+  </div>
+  <div class="row">
+    <div class="col-3">Apellidos</div>
+    <div class="col-9">{{ model.lastname }}</div>
+  </div>
+  <div class="row">
+    <div class="col-3">Email</div>
+    <div class="col-9">{{ model.email }}</div>
+  </div>
+  <div class="row">
+    <div class="col-3">Talla de Camiseta</div>
+    <div class="col-9">{{ model.size }}</div>
+  </div>
+  <div class="row">
+    <div class="col-3">Club de Running</div>
+    <div class="col-9">{{ model.runningClub }}</div>
+  </div>
+  <br />
+  <button type="button" class="btn btn-primary" (click)="submitted = false">
+    Editar
+  </button>
+</div>

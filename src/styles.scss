@@ -1,0 +1,49 @@
+/* Definición de los estilos del tema*/
+@use '@angular/material' as mat;
+
+/* Incluir los estilos comunes de material*/
+@include mat.core();
+
+$custom-primary-map: (
+    50: #E8EAF6,
+    100: #C5CAE9,
+    200: #9FA8DA,
+    300: #7986CB,
+    400:#5C6BC0,
+    500:#3F51B5,
+    600:#3949AB,
+    700:#303F9F,
+    800:#283593,
+    900:#1A237E,
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400:#FFFFFF,
+        500:#FFFFFF,
+        600:#FFFFFF,
+        700:#FFFFFF,
+        800:#FFFFFF,
+        900:#FFFFFF
+    )
+);
+
+$custom-accent-map: mat.define-palette(mat.$green-palette, A200, A100, A400);
+
+$primary-palette: mat.define-palette($custom-primary-map);
+$accent-palette: mat.define-palette($custom-accent-map);
+
+$custom-theme: mat.define-light-theme((
+    color: (
+        primary: $primary-palette,
+        accent: $accent-palette
+    )
+));
+
+@include mat.all-component-themes($custom-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
