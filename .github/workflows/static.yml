@@ -1,5 +1,5 @@
 # Documentación de la acción utilizada para la compilación y despliegue:
-# https://github.com/marketplace/actions/angular-deploy-gh-pages-actions
+# https://github.com/marketplace/actions/angular-deploy-gh-pages-actions.
 name: Build and Deploy
 on:
   push:
