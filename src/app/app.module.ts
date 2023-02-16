@@ -9,6 +9,7 @@ import { NavigationComponent } from './layout/navigation/navigation.component';
 import { ModulesModule} from './modules/modules.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
+import { HeaderComponent } from './layout/header/header.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CoreModule } from './core/core.module';
     AppComponent,
     SkeletonComponent,
     FooterComponent,
-    NavigationComponent
+    NavigationComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
