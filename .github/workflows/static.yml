@@ -28,4 +28,4 @@ jobs:
         # La rama donde se desplegará la aplicación angular transpilada a html, css y javascript
         deploy_branch: gh-pages 
         # Directorio donde se almacenaran los ficheros distribuibles de la aplicación.
-        angular_dist_build_folder: dist/diw-angular-material-layout 
+        angular_dist_build_folder: dist/werruning
