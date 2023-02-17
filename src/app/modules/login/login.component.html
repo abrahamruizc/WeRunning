@@ -1,0 +1,12 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="Sushi">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-hint *ngIf="!passwordInput.value">Enter your password</mat-hint>
+    </mat-form-field>
+</form>
