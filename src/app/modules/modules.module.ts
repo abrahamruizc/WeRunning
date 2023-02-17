@@ -4,6 +4,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { UpdatepasswordComponent } from './updatepassword/updatepassword.component';
+import { MaterialModule } from '../core/material/material.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { UpdatepasswordComponent } from './updatepassword/updatepassword.compone
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ]
 })
 export class ModulesModule { }

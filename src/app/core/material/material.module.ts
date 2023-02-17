@@ -4,6 +4,9 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+
+
 
 
 @NgModule({
@@ -13,13 +16,15 @@ import {MatButtonModule} from '@angular/material/button';
     MatSlideToggleModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
   ],
   exports: [
     MatSlideToggleModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
   ]
 })
 export class MaterialModule { }
