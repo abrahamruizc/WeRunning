@@ -7,6 +7,7 @@ import { UpdatepasswordComponent } from './updatepassword/updatepassword.compone
 import { MaterialModule } from '../core/material/material.module';
 
 
+
 @NgModule({
   declarations: [
     RegistrationComponent,
@@ -16,7 +17,7 @@ import { MaterialModule } from '../core/material/material.module';
   imports: [
     CommonModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
   ]
 })
 export class ModulesModule { }
