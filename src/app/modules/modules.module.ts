@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CoreModule } from '../core/core.module';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 //
 
@@ -11,11 +12,14 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     RegistrationComponent,
     HomeComponent,
-//    LoginComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
+    CoreModule,
+    ReactiveFormsModule
+    
   ]
 })
 export class ModulesModule { }
