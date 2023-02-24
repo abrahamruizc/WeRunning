@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SkeletonComponent } from './layout/skeleton/skeleton.component';
 import { RegistrationComponent } from './modules/registration/registration.component';
 import { HomeComponent } from './modules/home/home.component';
+import { ListaEventosComponent } from './modules/lista-eventos/lista-eventos.component';
 
 const routes: Routes = [
   {
@@ -10,7 +11,7 @@ const routes: Routes = [
     component: SkeletonComponent,
     pathMatch: 'prefix',
     children: [
-      { path: '', component: HomeComponent },
+      { path: '', component: ListaEventosComponent },
       { path: 'register', component: RegistrationComponent }
     ]
   }
