@@ -5,6 +5,7 @@ import { RegistrationComponent } from './modules/registration/registration.compo
 import { ListaEventosComponent } from './modules/lista-eventos/lista-eventos.component';
 import { UpdatepasswordComponent } from './modules/updatepassword/updatepassword.component';
 import { HistoricoEventosComponent } from './modules/historico-eventos/historico-eventos.component';
+import { PayMethodComponent } from './modules/pay-method/pay-method.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
       { path: 'register', component: RegistrationComponent },
       { path: 'historico-eventos', component: HistoricoEventosComponent},
       { path: 'register', component: RegistrationComponent },
-      { path: 'updatepassword', component: UpdatepasswordComponent}
+      { path: 'updatepassword', component: UpdatepasswordComponent},
+      { path: 'pay-method', component: PayMethodComponent}
     ]
   }
 ];
