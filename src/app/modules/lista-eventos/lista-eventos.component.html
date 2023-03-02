@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="text-center py-2 my-4 w-75 mx-auto">Eventos</h1>
+    <div class="row elemento w-75 mx-auto">
+        <mat-card class="example-card my-4 mx-auto" *ngFor="let evento of eventos">
+            <mat-card-header>
+                <mat-card-title-group>
+                    <mat-card-title>{{evento.nombreEvento}}</mat-card-title>
+                    <mat-card-subtitle>{{evento.ciudad}}</mat-card-subtitle>
+                    <mat-card-subtitle>{{evento.fecha}}</mat-card-subtitle>
+                    <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                        alt="Image of a Shiba Inu">
+                </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+                {{evento.descripcion}}
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
