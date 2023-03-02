@@ -4,6 +4,7 @@ import { SkeletonComponent } from './layout/skeleton/skeleton.component';
 import { RegistrationComponent } from './modules/registration/registration.component';
 import { HomeComponent } from './modules/home/home.component';
 import { ListaEventosComponent } from './modules/lista-eventos/lista-eventos.component';
+import { UpdatepasswordComponent } from './modules/updatepassword/updatepassword.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,10 @@ const routes: Routes = [
     pathMatch: 'prefix',
     children: [
       { path: '', component: ListaEventosComponent },
-      { path: 'register', component: RegistrationComponent }
+      { path: 'register', component: RegistrationComponent },
+      { path: '', component: HomeComponent },
+      { path: 'register', component: RegistrationComponent },
+      { path: 'updatepassword', component: UpdatepasswordComponent}
     ]
   }
 ];

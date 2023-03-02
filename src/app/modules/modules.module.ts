@@ -5,7 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ListaEventosComponent } from './lista-eventos/lista-eventos.component';
 import { CoreModule } from '../core/core.module';
-
+import { UpdatepasswordComponent } from './updatepassword/updatepassword.component';
+import { MaterialModule } from '../core/material/material.module';
 
 
 
@@ -13,13 +14,14 @@ import { CoreModule } from '../core/core.module';
   declarations: [
     RegistrationComponent,
     HomeComponent,
-    ListaEventosComponent
-
+    ListaEventosComponent,
+    UpdatepasswordComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
-    CoreModule
+    CoreModule,
+    MaterialModule,
   ]
 })
 export class ModulesModule { }
