@@ -18,7 +18,8 @@ const routes: Routes = [
       { path: 'event-register', component: EventRegisterComponent },
       { path: 'historico-eventos', component: HistoricoEventosComponent},
       { path: 'register', component: RegistrationComponent },
-      { path: 'updatepassword', component: UpdatepasswordComponent}
+      { path: 'updatepassword', component: UpdatepasswordComponent},
+      { path: 'event-register', component: EventRegisterComponent}
     ]
   }
 ];
