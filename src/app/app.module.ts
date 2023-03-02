@@ -29,6 +29,7 @@ import { HeaderComponent } from './layout/header/header.component';
     ModulesModule,
     SharedModule,
     CoreModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
