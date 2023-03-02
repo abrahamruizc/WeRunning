@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Evento } from '../evento/evento.model'
+
 @Component({
-  selector: 'app-lista-eventos',
-  templateUrl: './lista-eventos.component.html',
-  styleUrls: ['./lista-eventos.component.scss']
+  selector: 'app-historico-eventos',
+  templateUrl: './historico-eventos.component.html',
+  styleUrls: ['./historico-eventos.component.scss']
 })
-export class ListaEventosComponent {
+export class HistoricoEventosComponent {
   model = new Evento(1,"Carrera nocturna","Sevilla",9,new Date(23-10-2023),"../../assets/img/","ojfjodsjlfñjdslfjlsdjflsjfljdslfjdsljflsmj´fojlfkdsjlfksdjsdl");
   model1 = new Evento(1,"Carrera nocturna","Sevilla",9,new Date(23-10-2023),"../../assets/img/","ojfjodsjlfñjdslfjlsdjflsjfljdslfjdsljflsmj´fojlfkdsjlfksdjsdl");
   model2 = new Evento(1,"Carrera nocturna","Sevilla",9,new Date(23-10-2023),"../../assets/img/","ojfjodsjlfñjdslfjlsdjflsjfljdslfjdsljflsmj´fojlfkdsjlfksdjsdl");

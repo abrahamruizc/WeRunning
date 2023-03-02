@@ -7,6 +7,7 @@ import { ListaEventosComponent } from './lista-eventos/lista-eventos.component';
 import { CoreModule } from '../core/core.module';
 import { UpdatepasswordComponent } from './updatepassword/updatepassword.component';
 import { MaterialModule } from '../core/material/material.module';
+import { HistoricoEventosComponent } from './historico-eventos/historico-eventos.component';
 
 
 
@@ -16,6 +17,7 @@ import { MaterialModule } from '../core/material/material.module';
     HomeComponent,
     ListaEventosComponent,
     UpdatepasswordComponent,
+    HistoricoEventosComponent,
   ],
   imports: [
     CommonModule,
