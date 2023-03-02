@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { ListaEventosComponent } from './lista-eventos/lista-eventos.component';
 import { CoreModule } from '../core/core.module';
 import { UpdatepasswordComponent } from './updatepassword/updatepassword.component';
-import { MaterialModule } from '../core/material/material.module';
+
 import { HistoricoEventosComponent } from './historico-eventos/historico-eventos.component';
 
 
@@ -14,7 +14,7 @@ import { HistoricoEventosComponent } from './historico-eventos/historico-eventos
 @NgModule({
   declarations: [
     RegistrationComponent,
-    HomeComponent,
+
     ListaEventosComponent,
     UpdatepasswordComponent,
     HistoricoEventosComponent,
@@ -22,8 +22,7 @@ import { HistoricoEventosComponent } from './historico-eventos/historico-eventos
   imports: [
     CommonModule,
     FormsModule,
-    CoreModule,
-    MaterialModule,
+    CoreModule
   ]
 })
 export class ModulesModule { }
