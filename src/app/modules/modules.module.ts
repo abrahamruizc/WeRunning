@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { EventRegisterComponent } from './event-register/event-register.component';
 import { CoreModule } from '../core/core.module';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,11 +18,12 @@ import { RegistroanonimoComponent } from './registroanonimo/registroanonimo.comp
   declarations: [
     RegistrationComponent,
     LoginComponent,
-    ListaEventosComponent,
-    UpdatepasswordComponent,
-    HistoricoEventosComponent,
     ModificarDatosComponent,
     RegistroanonimoComponent,
+    EventRegisterComponent,
+    ListaEventosComponent,
+    UpdatepasswordComponent,
+    HistoricoEventosComponent
   ],
   imports: [
     CommonModule,

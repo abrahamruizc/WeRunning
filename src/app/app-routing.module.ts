@@ -9,6 +9,7 @@ import { HistoricoEventosComponent } from './modules/historico-eventos/historico
 import { ModificarDatosComponent } from './modules/modificar-datos/modificar-datos.component';
 import { RegistroanonimoComponent } from './modules/registroanonimo/registroanonimo.component';
 
+import { EventRegisterComponent } from './modules/event-register/event-register.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: '', component: ListaEventosComponent },
       { path: 'register', component: RegistrationComponent },
+      { path: 'event-register', component: EventRegisterComponent },
       { path: 'historico-eventos', component: HistoricoEventosComponent},
       { path: 'register', component: RegistrationComponent },
       { path: 'updatepassword', component: UpdatepasswordComponent},
@@ -27,6 +29,7 @@ const routes: Routes = [
       { path: 'registroanonimo', component: RegistroanonimoComponent},
       
 
+      { path: 'event-register', component: EventRegisterComponent}
     ]
   }
 ];
