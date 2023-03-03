@@ -1,0 +1,57 @@
+<div class="container">
+
+    <div name="titulo">
+        <h1 id="titulo" class="w-75 mx-auto">Formulario de Registro</h1>
+      </div>
+
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6  labeles">
+            <label for="nombre">Nombre</label>
+            <label for="apellido1">Primer apellido</label>
+            <label for="apellido2">Segundo apellido</label>
+            <label for="correo">Correo</label>
+            <label for="passs">Contraseña</label>
+            <label for="confpass">Confirmar Contraseña</label>
+        </div>
+
+        <div class="col-lg-4 col-md-6 labeles">
+            <input id="nombre" type="text">
+            <input id="apellido1" type="text">
+            <input id="apellido2" type="text">
+            <input id="coreo" type="text">
+            <input id="pass" type="password">
+            <input id="confpass" type="password">
+        </div>
+
+        <div class="col-lg-4 col-md-12 labeles">
+            <div class="mx-auto">
+                <img id="imgperfil" src="assets/img/usuario.png" alt="imagen de la foto de perfil">
+            </div>
+            <div name="botones" id="buttons" class="col-12 d-flex  justify-content-center">
+                <button class="me-3" mat-raised-button color="primary">Subir imagen de perfil</button>
+              </div>
+                      
+        </div>
+
+        <div class="row labeles">
+            <div name="titulo" class="col-4">
+                <p id="titulo" class="w-75 mx-auto">Subir imagen del DNI</p>
+            </div>
+            <div style="display: flex; margin: auto;">
+                <input class="my-auto" for="check" type="checkbox">
+                <label class="my-auto" for="check">Aceptar los términos de condiciones y usos de mis datos</label>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div name="botones" id="buttons" class="col-12 d-flex justify-content-center">
+            <button class="me-3" mat-raised-button color="warn">Reestablecer datos</button>
+            <button class="ms-3"mat-raised-button color="primary">Aceptar</button>
+            <button class="ms-3"mat-raised-button color="warn">Cancelar</button>
+          </div>
+    </div>
+
+</div>

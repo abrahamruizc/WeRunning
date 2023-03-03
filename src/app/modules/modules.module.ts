@@ -7,6 +7,8 @@ import { CoreModule } from '../core/core.module';
 import { UpdatepasswordComponent } from './updatepassword/updatepassword.component';
 import { MaterialModule } from '../core/material/material.module';
 import { HistoricoEventosComponent } from './historico-eventos/historico-eventos.component';
+import { ModificarDatosComponent } from './modificar-datos/modificar-datos.component';
+import { RegistroanonimoComponent } from './registroanonimo/registroanonimo.component';
 
 
 
@@ -16,6 +18,8 @@ import { HistoricoEventosComponent } from './historico-eventos/historico-eventos
     ListaEventosComponent,
     UpdatepasswordComponent,
     HistoricoEventosComponent,
+    ModificarDatosComponent,
+    RegistroanonimoComponent,
   ],
   imports: [
     CommonModule,
