@@ -1,0 +1,44 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+#botones {
+    display: flex;
+    justify-content: right;
+}
+
+#botones button {
+    margin: 3%;
+}
+
+#registro{
+    background-color: rgb(174, 204, 223); 
+}
+
+img {
+    width: 60%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#imglogo {
+    margin: auto;
+}
+
+header {
+    background-color: rgb(51,64,91);
+}
+
+@media (min-width: 576px) {
+ 
+    img {
+        width: 40%;
+    }
+}
+
+@media (min-width: 768px) {
+    img {
+        width: 20%;
+    }
+}
+  

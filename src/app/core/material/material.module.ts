@@ -11,6 +11,7 @@ import { MatCardModule } from "@angular/material/card";
 
 
 
+
 @NgModule({
   declarations: [],
   imports: [
@@ -21,7 +22,10 @@ import { MatCardModule } from "@angular/material/card";
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     MatSlideToggleModule,
@@ -30,7 +34,10 @@ import { MatCardModule } from "@angular/material/card";
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }
