@@ -1,29 +1,29 @@
 .example-form {
-    min-width: 150px;
-    max-width: 400px;
-    width: 100%;
-  }
-  
-.example-full-width {
-    width: 100%;
+  min-width: 150px;
+  max-width: 400px;
+  width: 100%;
 }
 
-.contenedorLogin {
-  margin: auto;
+.example-full-width {
+  width: 100%;
 }
 
 .example-card {
-  max-width: 450px;
-  margin: 10px;
+max-width: 450px;
+margin: 10px;
+margin: auto;
+
 }
 
-mat-card-subtitle {
-  font-size: 18px;
+.principal {
+height: 60vh;
+
 }
-  
-mat-card-title {
-  color: green;
-  font-size: 55px;
-  justify-content: center;
-  display: flex;
+
+#divBotones {
+margin: auto;
+}
+
+button {
+margin: auto;
 }
