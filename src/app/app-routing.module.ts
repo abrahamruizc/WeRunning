@@ -25,7 +25,7 @@ const routes: Routes = [
       { path: 'event-register', component: EventRegisterComponent },
       { path: 'historico-eventos', component: HistoricoEventosComponent},
       { path: 'register', component: RegistrationComponent },
-      { path: 'updatepassword', component: UpdatepasswordComponent},
+      { path: 'modificar-datos/updatepassword', component: UpdatepasswordComponent},
       { path: 'modificar-datos', component: ModificarDatosComponent},
       { path: 'registroanonimo', component: RegistroanonimoComponent},
       { path: 'event-register', component: EventRegisterComponent},
