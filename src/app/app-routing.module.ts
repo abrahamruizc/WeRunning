@@ -21,15 +21,12 @@ const routes: Routes = [
       { path: 'register', component: RegistrationComponent },
       { path: 'login', component: LoginComponent },
       { path: '', component: ListaEventosComponent },
-      { path: 'register', component: RegistrationComponent },
       { path: 'event-register', component: EventRegisterComponent },
       { path: 'historico-eventos', component: HistoricoEventosComponent},
-      { path: 'register', component: RegistrationComponent },
       { path: 'modificar-datos/updatepassword', component: UpdatepasswordComponent},
       { path: 'modificar-datos', component: ModificarDatosComponent},
       { path: 'registroanonimo', component: RegistroanonimoComponent},
-      { path: 'event-register', component: EventRegisterComponent},
-      { path: 'pay-method', component: PayMethodComponent},
+      { path: 'pay-method', component: PayMethodComponent}
     ]
   }
 ];
