@@ -1,0 +1,121 @@
+<div class="container text-center contenedor">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+               
+            <h1 class="color rounded-pill p-1">FORMULARIO DE REGISTRO</h1>
+            
+                
+            <form class="mt-4">
+                <p class="d-flex">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="rounded ms-2">
+                    <label for="apellidos" class="ms-4">Apellidos</label>
+                    <input type="text" class="rounded ms-2">
+                </p>
+                
+                <p class="d-flex mt-4">
+                    <label for="correo">Correo electronico</label>
+                    <input type="email" class="rounded ms-2">
+                </p>
+                <p class="d-flex mt-4">
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" class="rounded ms-2">
+                </p>
+
+                <h3 class="color rounded-pill col-6 mt-4">SUBIR IMAGEN DEL DNI</h3>
+                
+                <div class="form-check col-5 mt-4">
+                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Check condiciones de uso
+                    </label>
+                  </div>
+                  <div class="form-check col-5">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Usar Datos para Crear Cuenta
+                    </label>
+                  </div>
+                
+            </form>
+        </div>
+
+        </div>
+
+        <div class="col">
+            
+            <h1 class="color rounded-pill p-1">CARRERA NOCTURNA SEVILLA 2022</h1>
+            
+            <div class="color position-relative evento text-center rounded mb-4 mt-4">
+                
+                <img src="assets/img/evento.png" class="img-thumbnail position-absolute top-50 start-50 translate-middle" alt="evento">
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-md-6 mx-auto justify-content-around d-flex">
+              <button mat-raised-button color="warn" id="superacion">Resetear</button>
+            <button mat-raised-button color="primary" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">Aceptar</button>
+            <button mat-raised-button color="warn">Cancelar</button>
+            </div>            
+        </div>
+    </div>
+
+   
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog ">
+        <div class="modal-content color">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Por favor rellene los siguientes campos para la creación de su cuenta</h1>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label id="usuario" class="form-label">Correo electronico</label
+                ><input
+                  class="form-control"
+                  type="email"
+                  placeholder="correo/cuenta"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label id="contrasena" class="form-label">Contraseña</label
+                ><input
+                  class="form-control"
+                  type="password"
+                  placeholder="contraseña"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label id="contrasena" class="form-label">Repita su contraseña</label
+                ><input
+                  class="form-control"
+                  type="password"
+                  placeholder="contraseña"
+                />
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="col"><button mat-raised-button color="primary">Aceptar</button></div>
+            <div class="col"><button mat-raised-button color="warn" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
