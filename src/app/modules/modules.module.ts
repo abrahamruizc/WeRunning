@@ -11,6 +11,7 @@ import { MaterialModule } from '../core/material/material.module';
 import { HistoricoEventosComponent } from './historico-eventos/historico-eventos.component';
 import { ModificarDatosComponent } from './modificar-datos/modificar-datos.component';
 import { RegistroanonimoComponent } from './registroanonimo/registroanonimo.component';
+import { PayMethodComponent } from './pay-method/pay-method.component';
 
 
 
@@ -23,7 +24,9 @@ import { RegistroanonimoComponent } from './registroanonimo/registroanonimo.comp
     EventRegisterComponent,
     ListaEventosComponent,
     UpdatepasswordComponent,
-    HistoricoEventosComponent
+    HistoricoEventosComponent,
+    HistoricoEventosComponent,
+    PayMethodComponent,
   ],
   imports: [
     CommonModule,

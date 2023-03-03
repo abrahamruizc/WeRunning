@@ -10,6 +10,7 @@ import { ModificarDatosComponent } from './modules/modificar-datos/modificar-dat
 import { RegistroanonimoComponent } from './modules/registroanonimo/registroanonimo.component';
 
 import { EventRegisterComponent } from './modules/event-register/event-register.component';
+import { PayMethodComponent } from './modules/pay-method/pay-method.component';
 
 const routes: Routes = [
   {
@@ -27,9 +28,8 @@ const routes: Routes = [
       { path: 'updatepassword', component: UpdatepasswordComponent},
       { path: 'modificar-datos', component: ModificarDatosComponent},
       { path: 'registroanonimo', component: RegistroanonimoComponent},
-      
-
-      { path: 'event-register', component: EventRegisterComponent}
+      { path: 'event-register', component: EventRegisterComponent},
+      { path: 'pay-method', component: PayMethodComponent},
     ]
   }
 ];
