@@ -9,9 +9,9 @@ import { Password } from './password.model';
 })
 export class UpdatepasswordComponent {
 
-  p = new Password('papa')
+
   
-  pActual = new FormControl('', [Validators.required]);
+  pActual = new FormControl('', [Validators.required, Validators.minLength(8)]);
   pnueva = new FormControl('', [Validators.required ,Validators.minLength(8)]);
   pnueva2 = new FormControl('', [Validators.required, Validators.minLength(8)]);
 
