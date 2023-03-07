@@ -21,23 +21,23 @@
             <p class="col-9 mx-auto">
               <mat-form-field class="example-full-width">
                 <mat-label>Numero de la tarjeta</mat-label>
-                <input matInput placeholder="" value="" />
+                <input [formControl]="numeroTarjeta" matInput value="" />
               </mat-form-field>
             </p>
             <p class="col-9 mx-auto">
               <mat-form-field class="example-full-width">
                 <mat-label>Titular de la tarjeta</mat-label>
-                <input matInput placeholder="" value="" />
+                <input [formControl]="titularTarjeta" matInput value="" />
               </mat-form-field>
             </p>
             <div class="d-flex col-9 mx-auto">
               <mat-form-field class="example-full-width me-3">
                 <mat-label>Fecha de caducidad</mat-label>
-                <input matInput placeholder="" value="" />
+                <input matInput [formControl]="fechaCaducidad" pattern="\d{1,2}/\d{2}" value="" />
               </mat-form-field>
               <mat-form-field class="example-full-width ms-3">
                 <mat-label>CVV</mat-label>
-                <input matInput placeholder="" value="" />
+                <input matInput [formControl]="cvv" value="" />
               </mat-form-field>
             </div>
           </div>
@@ -72,7 +72,7 @@
       id="buttons"
       class="col-12 d-flex justify-content-center"
     >
-      <button class="me-5" mat-raised-button color="primary">Pagar</button>
+      <button [disabled]="numeroTarjeta.invalid || titularTarjeta.invalid || fechaCaducidad.invalid || cvv.invalid" class="me-5" mat-raised-button color="primary">Pagar</button>
       <button class="ms-5" mat-raised-button color="warn">Cancelar</button>
     </div>
   </div>

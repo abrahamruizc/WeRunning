@@ -7,5 +7,6 @@ export class Person {
       public pass: string,
       public confpass: string,
       public fnaci: string,
+      public check: boolean
     ) {}
   }

@@ -7,13 +7,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from "@angular/material/card";
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
 
 
 
-import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 
@@ -35,8 +35,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule,
-
+    MatCheckboxModule
   ],
   exports: [
     MatSlideToggleModule,
@@ -50,7 +49,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule
-   
   ]
 })
 export class MaterialModule { }
