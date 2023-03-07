@@ -14,13 +14,14 @@ import { HeaderComponent } from './layout/header/header.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SkeletonComponent,
     FooterComponent,
     NavigationComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +29,7 @@ import { HeaderComponent } from './layout/header/header.component';
     BrowserAnimationsModule,
     ModulesModule,
     SharedModule,
-    CoreModule
+    CoreModule,
 
   ],
   providers: [],
