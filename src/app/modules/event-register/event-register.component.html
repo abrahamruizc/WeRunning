@@ -11,14 +11,14 @@
                     <mat-form-field required>
                       <mat-label>Nombre</mat-label>
                       <input class="mt" type="text" matInput required  [formControl]="nombre"/>
-                      <mat-error *ngIf="nombre.invalid">{{getErrorMessage()}}</mat-error>
+                      <mat-error *ngIf="nombre.invalid">{{getErrorMessagenombre()}}</mat-error>
                     </mat-form-field>
                     
                    
                     <mat-form-field class="rounded ms-2">
                       <mat-label>Apellidos</mat-label>
                       <input class="mt" type="text" matInput required  [formControl]="apellidos"/>
-                      <mat-error *ngIf="apellidos.invalid">{{getErrorMessage()}}</mat-error>
+                      <mat-error *ngIf="apellidos.invalid">{{getErrorMessageapellidos()}}</mat-error>
                     </mat-form-field>
                 </p>
                 
@@ -26,14 +26,14 @@
                     <mat-form-field  class="">
                       <mat-label>Correo electronico</mat-label>
                       <input class="mt" type="text" matInput required  [formControl]="correo"/>
-                      <mat-error *ngIf="correo.invalid">{{getErrorMessage()}}</mat-error>
+                      <mat-error *ngIf="correo.invalid">{{getErrorMessagecorreo()}}</mat-error>
                     </mat-form-field>
                 </p>
                 <p class="d-flex mt-4">
                     <mat-form-field class="">
                       <mat-label>Fecha de nacimiento</mat-label>
                       <input class="mt" type="text" matInput required  [formControl]="fecha"/>
-                      <mat-error *ngIf="fecha.invalid">{{getErrorMessage()}}</mat-error>
+                      <mat-error *ngIf="fecha.invalid">{{getErrorMessagefecha()}}</mat-error>
                     </mat-form-field>
                 </p>
 
@@ -48,8 +48,8 @@
                     
                   </div>
 
-                  <div class="col-12 col-md-6 mx-auto justify-content-around d-flex">
-                    <button type="button" mat-raised-button color="warn" (click)="personForm.reset()"  id="superacion">Resetear</button>
+                  <div class="col-12 col-md-8 mx-auto justify-content-around d-flex mb-4 mt-4">
+                    <button type="reset" mat-raised-button color="warn"  id="superacion">Resetear</button>
 
                     <button type="button"  mat-raised-button type="submit" class="btn btn-success" [disabled]="!personForm.form.valid" color="primary" data-bs-toggle="modal" 
                     data-bs-target="#staticBackdrop">
@@ -73,14 +73,7 @@
             </div>
 
         </div>
-        <div class="row mt-4">
-            <div class="col-12 col-md-6 mx-auto justify-content-around d-flex">
-              <button type="button" mat-raised-button color="warn" (click)="personForm.reset()" id="superacion">Resetear</button>
-            <button type="button" mat-raised-button color="primary" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop" [disabled]="!personForm.form.valid">Aceptar</button>
-            <button type="button" mat-raised-button color="warn" onclick="location.href='./';">Cancelar</button>
-            </div>            
-        </div>
+        
     </div>
 
    
@@ -100,29 +93,34 @@
             <h1 class="modal-title fs-5" id="staticBackdropLabel">Por favor rellene los siguientes campos para la creación de su cuenta</h1>
           </div>
           <div class="modal-body">
-            <form>
+
+            <form (ngSubmit)="onSubmit()"  #personForm="ngForm">
               <div class="mb-3 text-center">
                 <mat-form-field class="">
                   <mat-label>Correo electronico</mat-label>
-                  <input class="mt" matInput placeholder="" value="" />
+                  <input class="mt" matInput required  [formControl]="correo"/>
+                  <mat-error *ngIf="correo.invalid">{{getErrorMessagecorreo()}}</mat-error>
                 </mat-form-field>
               </div>
 
               <div class="mb-3 text-center">
                 <mat-form-field class="">
                   <mat-label>Contraseña</mat-label>
-                  <input class="mt" matInput placeholder="" value="" />
+                  <input class="mt" matInput required  [formControl]="contrasena1" />
+                  <mat-error *ngIf="contrasena1.invalid">{{getErrorMessagecontra1()}}</mat-error>
                 </mat-form-field>
               </div>
 
               <div class="mb-3 text-center">
                 <mat-form-field class="">
                   <mat-label>Repita su contraseña</mat-label>
-                  <input class="mt" matInput placeholder="" value="" />
+                  <input class="mt" matInput required  [formControl]="contrasena2" />
+                  <mat-error *ngIf="contrasena2.invalid">{{getErrorMessagecontra2()}}</mat-error>
                 </mat-form-field>
               </div>
 
             </form>
+
           </div>
           <div class="modal-footer text-center">
             <div class="col"><button onclick="location.href='./pay-method';" mat-raised-button color="primary">Aceptar</button></div>
