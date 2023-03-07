@@ -6,25 +6,120 @@
 
     <div class="row">
 
-        <div class="col-lg-4 col-md-6  labeles">
-            <label for="nombre">Nombre</label>
-            <label for="apellido1">Primer apellido</label>
-            <label for="apellido2">Segundo apellido</label>
-            <label for="correo">Correo</label>
-            <label for="passs">Contraseña</label>
-            <label for="confpass">Confirmar Contraseña</label>
+        <div class="col-lg-6 col-md-12 labeles">
+            <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Nombre</mat-label>
+                    <input
+                    type="text"
+                    class="form-control" 
+                    id="firstName" 
+                    name="firstName"
+                    #firstName="ngModel" 
+                    required
+                    [(ngModel)]="model.firstname"
+                    matInput 
+                    />
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Primer apellido</mat-label>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    name="lastName"
+                    #lastName="ngModel"
+                    required
+                    [(ngModel)]="model.lastname" 
+                    matInput/>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Segundo apellido</mat-label>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    id="secondlastName"
+                    name="secondlastName"
+                    #secondlastName="ngModel"
+                    [(ngModel)]="model.secondlastname" 
+                    matInput/>
+                </mat-form-field>
+                <div style="display: flex; flex-direction: column;">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Correo electrónico</mat-label>
+                        <input 
+                        type="email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        #email="ngModel"
+                        required
+                        [(ngModel)]="model.email" 
+                        matInput/>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Contraseña</mat-label>
+                        <input 
+                        type="password"
+                        class="form-control"
+                        id="pass"
+                        name="pass"
+                        #pass="ngModel"
+                        required
+                        [(ngModel)]="model.pass"
+                        matInput/>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Confirmar contraseña</mat-label>
+                        <input 
+                        type="password"
+                        class="form-control"
+                        id="confpass"
+                        name="confpass"
+                        #pass="ngModel"
+                        required
+                        [(ngModel)]="model.confpass"
+                        matInput/>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Fecha de nacimiento</mat-label>
+                        <input 
+                        pattern="\d{1,2}/\d{1,2}/\d{4}"
+                        type="text"
+                        class="form-control"
+                        id="fnaci"
+                        name="fnaci"
+                        #fnaci="ngModel"
+                        required
+                        [(ngModel)]="model.fnaci"  
+                        matInput/>
+                    </mat-form-field>
+                </div>
+                <div class="row labeles">
+                    <div name="titulo" class="col-6">
+                        <button class="me-3" mat-raised-button color="primary">Subir imagen del DNI</button>
+                    </div>
+                    <div style="display: flex; margin: auto; margin-top: 2%;">
+                        <mat-checkbox id="check" color="primary"
+                        required>Aceptar los términos de uso</mat-checkbox>
+                    </div>
+                </div>
+                <div class="row">
+                    <div name="botones" id="buttons" class="col-12 d-flex justify-content-center">
+                        <button class="me-3" mat-raised-button color="warn"
+                        (click)="personForm.reset()">Reestablecer datos</button>
+                        <button type="submit" class="ms-3"mat-raised-button color="primary"
+                        [disabled]="!personForm.form.valid" 
+                        (click)="newPerson()">Aceptar</button>
+                        <button class="ms-3"mat-raised-button color="warn">Cancelar</button>
+                      </div>
+                </div>
+            </form>
+                
         </div>
 
-        <div class="col-lg-4 col-md-6 labeles">
-            <input id="nombre" type="text">
-            <input id="apellido1" type="text">
-            <input id="apellido2" type="text">
-            <input id="coreo" type="text">
-            <input id="pass" type="password">
-            <input id="confpass" type="password">
-        </div>
-
-        <div class="col-lg-4 col-md-12 labeles">
+        <div class="col-lg-6 col-md-12 labeles">
             <div class="mx-auto">
                 <img id="imgperfil" src="assets/img/usuario.png" alt="imagen de la foto de perfil">
             </div>
@@ -34,24 +129,6 @@
                       
         </div>
 
-        <div class="row labeles">
-            <div name="titulo" class="col-4">
-                <p id="titulo" class="w-75 mx-auto">Subir imagen del DNI</p>
-            </div>
-            <div style="display: flex; margin: auto;">
-                <input class="my-auto" for="check" type="checkbox">
-                <label class="my-auto" for="check">Aceptar los términos de condiciones y usos de mis datos</label>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row">
-        <div name="botones" id="buttons" class="col-12 d-flex justify-content-center">
-            <button class="me-3" mat-raised-button color="warn">Reestablecer datos</button>
-            <button class="ms-3"mat-raised-button color="primary">Aceptar</button>
-            <button class="ms-3"mat-raised-button color="warn">Cancelar</button>
-          </div>
     </div>
 
 </div>

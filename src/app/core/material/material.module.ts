@@ -13,6 +13,14 @@ import { MatCardModule } from "@angular/material/card";
 
 
 
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+
+
+
+
+
+
 @NgModule({
   declarations: [],
   imports: [
@@ -26,7 +34,9 @@ import { MatCardModule } from "@angular/material/card";
     MatCardModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule,
+
   ],
   exports: [
     MatSlideToggleModule,
@@ -38,7 +48,9 @@ import { MatCardModule } from "@angular/material/card";
     MatCardModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule
+   
   ]
 })
 export class MaterialModule { }

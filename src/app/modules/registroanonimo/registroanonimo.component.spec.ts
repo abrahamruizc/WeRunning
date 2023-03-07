@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegistroanonimoComponent } from './registroanonimo.component';
 
+
 describe('RegistroanonimoComponent', () => {
   let component: RegistroanonimoComponent;
   let fixture: ComponentFixture<RegistroanonimoComponent>;
