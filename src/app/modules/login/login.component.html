@@ -6,18 +6,18 @@
                     <mat-label>Usuario</mat-label>
                     <input 
                     matInput 
+                    [formControl]="password"
                     placeholder="Usuario" 
                     id="username"
                     name="username"
-                    #username="ngModel"
-                    [(ngModel)]="model.username"
                     required/>
                 </mat-form-field>
         
                 <mat-form-field class="example-full-width">
                     <mat-label>Contraseña</mat-label>
                     <input 
-                    matInput 
+                    matInput
+                    [formControl]="password"
                     placeholder="Password" 
                     [type]="hide ? 'password' : 'text'" 
                     formControlName="password" 
@@ -25,7 +25,6 @@
                     name="password"
                     password="ngModel"
                     required
-                    [(ngModel)]="model.password"
                     />
                     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </mat-form-field>

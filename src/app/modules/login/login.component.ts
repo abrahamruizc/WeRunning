@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
+import { UrlSegment } from '@angular/router';
 import { User } from './user.model';
 
 @Component({
@@ -10,7 +11,7 @@ import { User } from './user.model';
 
 
 export class LoginComponent {
-    username = new FormControl('', [Validators.required, Validators.required ]);
+    username = new FormControl('', [Validators.required]);
     password = new FormControl('', [Validators.required, Validators.min(3) ]);
   hide = true;
 
@@ -20,20 +21,18 @@ export class LoginComponent {
   onSubmit() {this.submitted = true;}
 
   checkPassword() {
-    let username = document.getElementById("username");
-    let password = document.getElementById("password");
+    let username = (<HTMLInputElement>document.getElementById("username")).value;
+    let password = (<HTMLInputElement>document.getElementById("password")).value
 
     console.log(username);
     console.log(this.model.username);
 
+    if (username === this.model.username && password === this.model.password) {
+      location.href="./"
+    } else {
+      alert("Usuario y contraseña no coinciden con ningún usuario registrado.")
+    }
     
   }
  
 }
-
-//function getErrorMessagenombre() {
-//  if(this.signin.email.hasError('required')){
-//   return 'Debes introducir un nombre';
-//  } 
-//  return this.password.hasError('password') ? 'No es un nombre valido' : '';
-//}
