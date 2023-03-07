@@ -1,0 +1,46 @@
+<div class="container">
+
+    <div name="titulo">
+        <h1 id="titulo" class="w-75 mx-auto">Mi perfil</h1>
+      </div>
+
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6  labeles">
+            <label for="nombre">Nombre</label>
+            <label for="apellido1">Primer apellido</label>
+            <label for="apellido2">Segundo apellido</label>
+            <label for="correo">Correo</label>
+            <label for="dni">DNI</label>
+        </div>
+
+        <div class="col-lg-4 col-md-6 labeles">
+            <input id="nombre" type="text" value="xxxxxxxxxxxx">
+            <input id="apellido1" type="text" value="xxxxxxxxxxx">
+            <input id="apellido2" type="text" value="xxxxxxxxxxx">
+            <input id="coreo" type="text" value="xxxxxx@xxxxxx">
+            <input id="dni" type="text" value="xxxxxxxxx">
+        </div>
+
+        <div class="col-lg-4 col-md-12 labeles">
+            <div class="mx-auto">
+                <img id="imgperfil" src="assets/img/usuario.png" alt="imagen de la foto de perfil">
+            </div>
+            <div name="botones" id="buttons" class="col-12 d-flex  justify-content-center">
+                <button class="me-3" mat-raised-button color="primary">Editar foto</button>
+                <button onclick="location.href='modificar-datos/updatepassword';" class="ms-3"mat-raised-button color="warn">Editar contraseña</button>
+              </div>
+                      
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div name="botones" id="buttons" class="col-12 d-flex justify-content-center">
+            <button class="me-3" mat-raised-button color="primary">Aceptar</button>
+            <button class="ms-3"mat-raised-button color="warn">Cancelar</button>
+          </div>
+    </div>
+
+</div>
+  

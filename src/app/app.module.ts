@@ -12,6 +12,8 @@ import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './layout/header/header.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,7 @@ import { HeaderComponent } from './layout/header/header.component';
     ModulesModule,
     SharedModule,
     CoreModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
