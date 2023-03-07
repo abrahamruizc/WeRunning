@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { Password } from './password.model';
 
 @Component({
   selector: 'app-updatepassword',
@@ -8,13 +9,26 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class UpdatepasswordComponent {
 
-
+  p = new Password('papa')
   
-  pActual = new FormControl('', [Validators.required,   Validators.minLength(8)]);
+  pActual = new FormControl('', [Validators.required]);
+  pnueva = new FormControl('', [Validators.required ,Validators.minLength(8)]);
+  pnueva2 = new FormControl('', [Validators.required, Validators.minLength(8)]);
+
 
   submitted = false;
 
   onSubmit() { this.submitted = true;}
 
+  getErrorMessage() {
+    if(this.pActual.hasError('required')){
+      return 'Debes introducir la contraseña';
+    } //else if(this.pActual != this.p.password){
+
+   // }
+   
+  
+    return this.pActual.hasError('nombre') ? 'No es un nombre valido' : '';
+  }
   
 }
