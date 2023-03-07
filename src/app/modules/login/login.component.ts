@@ -16,18 +16,15 @@ export class LoginComponent {
   hide = true;
 
   model = new User("admin", "admin");
+  model2 = new User("","");
 
   submitted = false;
   onSubmit() {this.submitted = true;}
 
   checkPassword() {
-    let username = (<HTMLInputElement>document.getElementById("username")).value;
-    let password = (<HTMLInputElement>document.getElementById("password")).value
 
-    console.log(username);
-    console.log(this.model.username);
 
-    if (username === this.model.username && password === this.model.password) {
+    if (this.model2.username === this.model.username && this.model2.password  === this.model.password) {
       location.href="./"
     } else {
       alert("Usuario y contraseña no coinciden con ningún usuario registrado.")
