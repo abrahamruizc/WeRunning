@@ -30,7 +30,7 @@
                     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </mat-form-field>
                 <div class="row">
-                    <button class="col-3 mx-auto width:50%" mat-raised-button color="primary" id="registro">Enviar</button>
+                    <button class="col-3 mx-auto width:50%" mat-raised-button color="primary" id="registro" (click)="checkPassword()" >Enviar</button>
                     <button class="col-3 mx-auto width:50%" mat-raised-button color="warn">Cancelar</button>
                 </div>
             </form>  

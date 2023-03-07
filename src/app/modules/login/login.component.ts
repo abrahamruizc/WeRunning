@@ -10,10 +10,8 @@ import { User } from './user.model';
 
 
 export class LoginComponent {
-  signin : FormGroup = new FormGroup({
-    username: new FormControl('', [Validators.required, Validators.required ]),
-    password: new FormControl('', [Validators.required, Validators.min(3) ])
-  });
+    username = new FormControl('', [Validators.required, Validators.required ]);
+    password = new FormControl('', [Validators.required, Validators.min(3) ]);
   hide = true;
 
   model = new User("admin", "admin");
@@ -21,8 +19,15 @@ export class LoginComponent {
   submitted = false;
   onSubmit() {this.submitted = true;}
 
-  get emailInput() { return this.signin.get('username'); }
-  get passwordInput() { return this.signin.get('password'); } 
+  checkPassword() {
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+
+    console.log(username);
+    console.log(this.model.username);
+
+    
+  }
  
 }
 
