@@ -101,7 +101,14 @@
                         <button class="me-3" mat-raised-button color="primary">Subir imagen del DNI</button>
                     </div>
                     <div style="display: flex; margin: auto; margin-top: 2%;">
-                        <mat-checkbox id="check" color="primary"
+                        <mat-checkbox 
+                        id="check" 
+                        type="checkbox"
+                        class="form-control"
+                        name="check"
+                        #check="ngModel"
+                        [(ngModel)]="model.check" 
+                        color="primary"
                         required>Aceptar los términos de uso</mat-checkbox>
                     </div>
                 </div>

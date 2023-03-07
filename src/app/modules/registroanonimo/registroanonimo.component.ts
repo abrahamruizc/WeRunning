@@ -8,20 +8,17 @@ import { Person } from './person.model';
 })
 export class RegistroanonimoComponent {
 
-  model = new Person("", "", "", "", "","", '');
+  model = new Person("", "", "", "", "","", '', false);
+
 
   submitted = false;
 
   onSubmit() {this.submitted = true;}
 
   newPerson() {
-    if(document.getElementById("check")) {
-      this.model = new Person("", "", "", "", "","", '');
-      alert("Registro realizado correctamente");
-    } else {
-      alert("Por favor, acepte los términos de uso")
-    }
-    
+   
+      this.model = new Person("", "", "", "", "","", '', true);
+      alert("Registro realizado correctamente");  
    
    
   }
