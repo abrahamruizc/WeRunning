@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import { Person } from './person.model';
+import {FormControl, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-event-register',
@@ -19,7 +19,6 @@ contrasena2 = new FormControl('', [Validators.required]);
 
 submitted = false;
 
-model = new Person("", "", "" , "");
 
 //, Validators.pattern("^(?=^[ -~]{6,64}$)(?=.([a-z][A-Z]))(?=.[0-9])(.*[ -/|:-@|[-`|{-~]).+$")
 onSubmit() { 
