@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { Person } from './person.model';
 
 @Component({
@@ -8,7 +8,7 @@ import { Person } from './person.model';
   styleUrls: ['./event-register.component.scss']
 })
 export class EventRegisterComponent {
-  
+
 
 nombre = new FormControl('', [Validators.required, Validators.minLength(8)]);
 apellidos = new FormControl('', [Validators.required, Validators.minLength(8)]);
@@ -19,7 +19,7 @@ contrasena2 = new FormControl('', [Validators.required]);
 
 submitted = false;
 
-model = new Person(1, "", "", "" , "");
+model = new Person("", "", "" , "");
 
 //, Validators.pattern("^(?=^[ -~]{6,64}$)(?=.([a-z][A-Z]))(?=.[0-9])(.*[ -/|:-@|[-`|{-~]).+$")
 onSubmit() { 

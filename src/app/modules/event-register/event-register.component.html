@@ -10,14 +10,14 @@
                 <p class="d-flex">
                     <mat-form-field required>
                       <mat-label>Nombre</mat-label>
-                      <input class="mt" type="text" matInput required  [formControl]="nombre"/>
+                      <input class="mt" type="text" matInput required [(ngModel)]="model.firstname"  [formControl]="nombre"/>
                       <mat-error *ngIf="nombre.invalid">{{getErrorMessagenombre()}}</mat-error>
                     </mat-form-field>
                     
                    
                     <mat-form-field class="rounded ms-2">
                       <mat-label>Apellidos</mat-label>
-                      <input class="mt" type="text" matInput required  [formControl]="apellidos"/>
+                      <input class="mt" type="text" matInput required [(ngModel)]="model.lastname" [formControl]="apellidos"/>
                       <mat-error *ngIf="apellidos.invalid">{{getErrorMessageapellidos()}}</mat-error>
                     </mat-form-field>
                 </p>
@@ -25,14 +25,14 @@
                 <p class="d-flex mt-4">
                     <mat-form-field  class="">
                       <mat-label>Correo electronico</mat-label>
-                      <input class="mt" type="text" matInput required  [formControl]="correo"/>
+                      <input class="mt" type="text" matInput required [(ngModel)]="model.email"  [formControl]="correo"/>
                       <mat-error *ngIf="correo.invalid">{{getErrorMessagecorreo()}}</mat-error>
                     </mat-form-field>
                 </p>
                 <p class="d-flex mt-4">
                     <mat-form-field class="">
                       <mat-label>Fecha de nacimiento</mat-label>
-                      <input class="mt" type="text" matInput required  [formControl]="fecha"/>
+                      <input class="mt" type="text" matInput required [(ngModel)]="model.fecha"   [formControl]="fecha"/>
                       <mat-error *ngIf="fecha.invalid">{{getErrorMessagefecha()}}</mat-error>
                     </mat-form-field>
                 </p>
@@ -47,11 +47,11 @@
                   <mat-checkbox class="example-margin" color="primary">Usar Datos para Crear Cuenta</mat-checkbox>
                     
                   </div>
-      <p>{{ personForm.form.valid }}</p>
+                <p>{{ personForm.form.valid }}</p>
                   <div class="col-12 col-md-8 mx-auto justify-content-around d-flex mb-4 mt-4">
                     <button type="reset" mat-raised-button color="warn"  id="superacion">Resetear</button>
 
-                    <button type="button"  mat-raised-button type="submit" class="btn btn-success" [disabled]="!personForm.form.valid" color="primary" data-bs-toggle="modal" 
+                    <button mat-raised-button type="submit" class="btn btn-success" [disabled]="(fecha.invalid || correo.invalid || nombre.invalid || apellidos.invalid)" color="primary" data-bs-toggle="modal" 
                     data-bs-target="#staticBackdrop">
                     Aceptar
                   </button>
